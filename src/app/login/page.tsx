@@ -15,7 +15,7 @@ const LoginPage: React.FC = () => {
     const handleLogin = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
-            const response = await axios.post('/users/login', { username, password });
+            const response = await axios.post('/user-management/users/login', { username, password });
             if (response.status === 200) {
                 localStorage.setItem('token', response.data.token); // Save JWT token
                 router.push('/dashboard'); // Redirect to dashboard
