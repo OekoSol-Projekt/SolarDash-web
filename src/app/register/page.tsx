@@ -20,7 +20,7 @@ const RegisterPage: React.FC = () => {
             return;
         }
         try {
-            const response = await axios.post('/users/register', { username, password });
+            const response = await axios.post('/user-management/users/register', { username, password });
             if (response.status === 201) {
                 router.push('/login');
             }
